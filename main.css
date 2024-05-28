@@ -14,9 +14,19 @@ header{
     width: fit-content;
 }
 
+.pfp-container {
+    position: relative;
+}
 .pfp-container > img{
+    display: block;
     width: 150px;
     border-radius: 100%;
+}
+.pfp-container > img:nth-child(1){
+    position: absolute;
+    animation-name: logo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 .classes > .semester-title{
     margin-left: 4%;
@@ -38,4 +48,22 @@ main{
     padding-left: 3%;
     padding-right: 3%;
     display: flex;
+}
+
+@keyframes logo {
+    0%{
+        opacity: 0%;
+    }
+    20%{
+        opacity: 0%;
+    }
+    40%{
+        opacity: 100%;
+    }
+    80%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
 }
