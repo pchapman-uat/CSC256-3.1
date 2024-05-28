@@ -1,0 +1,41 @@
+body{ 
+    background-image: url(./images/background.png);
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.border {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1%;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.pfp-container > img{
+    width: 150px;
+    border-radius: 100%;
+}
+.classes > .semester-title{
+    margin-left: 4%;
+}
+.classes > .semester {
+    margin-left: 8%;
+}
+.skills {
+    margin-left: 4%;
+    padding-right: 10px;
+}
+.classes-section {
+    width: 50%;
+}
+.semester {
+    padding-right: 10px;
+}
+main{
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+}
