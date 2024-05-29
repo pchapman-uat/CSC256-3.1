@@ -80,8 +80,8 @@ const HEADER = [
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    let header_el = document.getElementById("test")
-    for(div of HEADER){
+    let header_el = document.getElementById("header")
+    for(let div of HEADER){
         header_el.appendChild(div.createContainer())
     }
 })
