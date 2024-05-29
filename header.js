@@ -26,12 +26,62 @@ class Element{
     }
 } 
 
-const HEADER = [new Element("h1", [new Attribute("class", "'border'")], "Preston Chapman")]
+class Div{
+    attributes;
+    elements;
+    constructor(elements, attributes){
+        this.elements = elements;
+        this.attributes = attributes;
+    }
+    createContainer(){
+        let container = document.createElement("div")
+        for(let element of this.elements){
+            container.appendChild(element.createElement())
+        }
+        if(this.attributes == null) return container;
+        for(let attribute of this.attributes){
+            container.setAttribute(attribute.type, attribute.value)
+        }
+        return container;
+    }
+}
+
+const HEADER = [
+    new Div(
+        [ 
+            new Element(
+                "h1", [new Attribute("class", "'border'")], 
+                "Preston Chapman"
+            ),
+            new Element(
+                "h2", [new Attribute("class", "'border'")], 
+                "Assignment 3.1: External JavaScript"
+            ),
+        ]
+    ),
+    new Div(
+        [
+            new Element(
+                "img", [new Attribute("src", "images/profile_pic.jpg")],
+                ""
+            ),
+            new Element(
+                "img", [new Attribute("src", "images/uat.webp")],
+                ""
+            )
+        ],
+        [
+            new Attribute("class", "pfp-container")
+        ]
+       
+    )
+
+]
+
 
 document.addEventListener("DOMContentLoaded", () => {
     let header_el = document.getElementById("test")
-    for(element of HEADER){
-        console.log(element)
-        header_el.appendChild(element.createElement())
+    for(div of HEADER){
+        header_el.appendChild(div.createContainer())
     }
 })
