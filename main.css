@@ -15,6 +15,7 @@ header{
 }
 
 .pfp-container {
+    margin-top: 17px;
     position: relative;
 }
 .pfp-container > img{
@@ -49,7 +50,12 @@ main{
     padding-right: 3%;
     display: flex;
 }
-
+#header{
+    flex-wrap: wrap;
+}
+.header{
+    margin:25px
+}
 @keyframes logo {
     0%{
         opacity: 0%;

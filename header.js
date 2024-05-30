@@ -57,6 +57,9 @@ const HEADER = [
                 "h2", [new Attribute("class", "'border'")], 
                 "Assignment 3.1: External JavaScript"
             ),
+        ],
+        [
+            new Attribute("class", "border header")
         ]
     ),
     new Div(
