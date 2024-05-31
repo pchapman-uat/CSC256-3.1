@@ -15,10 +15,10 @@ header{
 }
 
 .pfp-container {
-    margin-top: 17px;
     position: relative;
 }
 .pfp-container > img{
+    margin:25px;
     display: block;
     width: 150px;
     border-radius: 100%;
@@ -39,9 +39,6 @@ header{
     margin-left: 4%;
     padding-right: 10px;
 }
-.classes-section {
-    width: 50%;
-}
 .semester {
     padding-right: 10px;
 }
@@ -49,6 +46,7 @@ main{
     padding-left: 3%;
     padding-right: 3%;
     display: flex;
+    justify-content: space-around;
 }
 #header{
     flex-wrap: wrap;
