@@ -81,10 +81,24 @@ const HEADER = [
 
 ]
 
+const NAV = [
+    new Element(
+        "a", [new Attribute("href", "index.html"), new Attribute("class", "nav-link")],
+        "Home"
+    ),
+    new Element(
+        "a", [new Attribute("href", "classes.html"), new Attribute("class", "nav-link")],
+        "Classes"
+    )
+]
 
 document.addEventListener("DOMContentLoaded", () => {
     let header_el = document.getElementById("header")
     for(let div of HEADER){
         header_el.appendChild(div.createContainer())
+    }
+    let nav_el = document.getElementById("nav")
+    for(let div of NAV){
+        nav_el.appendChild(div.createElement())
     }
 })
